@@ -1,0 +1,100 @@
+:root {
+    --color-primario: #76d7c4;
+    --color-secundario: #DAF7A6;
+    --color-bg1: #f4f6f7;
+    --color-bg2: #d7dbdd;
+    --color-h: #2e4053;
+    --color-btn: #7fb3d5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: 'Josefin Sans',
+        sans-serif;
+}
+
+h1,
+h3,
+h2 {
+    font-family: 'Protest Revolution',
+        sans-serif;
+}
+
+.container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 70px 1fr 50px;
+    grid-template-areas: "header header"
+        "aside section"
+        "footer footer";
+}
+
+.header {
+    grid-area: header;
+    text-align: center;
+    padding-top: 10px;
+    color: var(--color-h);
+    background-color: var(--color-primario);
+}
+
+.aside {
+    grid-area: aside;
+    background-color: var(--color-secundario);
+    padding: 10px;
+}
+
+.aside ul {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    list-style-type: none;
+}
+
+.section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    place-items: center;
+    grid-area: section;
+    background-color: var(--color-bg1);
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    background-color: var(--color-bg2);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cards img {
+    width: 200px;
+}
+
+.cards p {
+    padding: 10px;
+}
+
+.cards button {
+    padding: 10px;
+    background-color: var(--color-btn);
+
+}
+
+.footer {
+    grid-area: footer;
+    background-color: var(--color-primario);
+    color: var(--color-h);
+    text-align: center;
+    padding-top: 20px;
+}
